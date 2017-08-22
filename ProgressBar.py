@@ -7,7 +7,7 @@ class ProgressBar:
 		self.width = width
 		self.set(0.)
     	def show(self):
-        	sys.stdout.write('\r[%s%s] %d %%'%('-'*int(self.p*self.width),' '*(self.width-int(self.width*self.p)),100*self.p))
+        	sys.stdout.write('\r[%s%s] %.2f %%'%('-'*int(self.p*self.width),' '*(self.width-int(self.width*self.p)),100*self.p))
         	sys.stdout.flush()
         	if (self.p>=1):
             		sys.stdout.write('\n')
