@@ -15,7 +15,7 @@ class ProgressBar:
     def _set(self, i):
         self.p = 1. * (i-self.start) / (self.end-self.start)
     def update(self, i):
-        self.set(i)
+        self._set(i)
         self.show()
 
 pb = ProgressBar(0, 1000000, 40)
